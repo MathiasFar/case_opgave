@@ -1,0 +1,36 @@
+html, body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.top-bar {
+    max-height: 150px;
+    height: 15%;
+    width: 100%;
+    background-color: black;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;    
+}
+
+.side-nav {
+    height: 100%;
+    width: 10%;
+    background-color: #C67C58;
+}
+
+.side-nav:hover {
+    width: 25%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #FFD6BA;
+}
+
