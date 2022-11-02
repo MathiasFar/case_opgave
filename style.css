@@ -10,21 +10,37 @@ html, body {
     background-color: #FFD6BA;
     position: relative;
     align-items: center;
-    box-shadow: 0px 5px 5px #808080;
+    justify-content: center;
+    box-shadow: 0px 5px 5px #b9b9b9;
     z-index: 6;
 }
+
+.top-bar p {
+    font-family: "Roboto", "sans-serif";
+    font-weight: bold;
+    font-size: 65px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    margin-left: 150px;
+    transform: translateY(-50%);
+} 
 
 .circle {
     background-color: red;
     border-radius: 50%;
     height: 75px;
     width: 75px;
-    margin-left: 10px;
+    margin-left: 37.5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .content-wrapper {
     width: 100%;
     height: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     z-index: 1;
@@ -32,21 +48,81 @@ html, body {
 
 .side-nav {
     height: 100%;
-    max-width: 110px;
-    width: 110px;
+    width: 65px;
     background-color: #FFB685;
     display: flex;
     flex-direction: column;
     z-index: 2;
-    align-items: center;
 }
 
-.side-nev, a {
-    background-color: red;
-    padding 20px;
-    margin: 15px;
+#dinmor {
+    margin-top: 50px;
+}
+
+.side-nav img {
+    position: relative;
+    left: 0px;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.side-nav.expand {
+	animation: expand 0.5s forwards;
+}
+
+.side-nav.collapse {
+	animation: shrink 0.5s backwards;
+}
+
+@keyframes shrink{
+0% {
+    width: 220px;
+}
+100% {
+    width: 65px;
+}
+}
+
+@keyframes expand{
+0% {
+    width: 65px;
+}
+100% {
+    width: 220px;
+}
+}
+
+.side-nav img.spinForward{
+	animation: forward 0.5s forwards;
+}
+
+.side-nav img.spinBackward{
+	animation: backward 0.5s backwards;
+}
+
+@keyframes forward {
+0% {
+    transform: none;
+}
+100% {
+    transform: rotate(90deg);
+}
+}
+
+@keyframes backward {
+0% {
+    transform: rotate(90deg);
+}
+100% {
+    transform: none;
+}
+}
+
+side-nav a {
+    margin: 15px 0px 15px 0px;
     font-family: roboto-slab;
     font-size: 30px;
+    color: #6A3C24;
 }
 
 
@@ -56,6 +132,41 @@ html, body {
     background-color: whitesmoke;
 }
 
+.event-left {
+    position: relative;
+    margin: 50px 100px 0px 100px;
+    height: auto;
+    min-height: 300px;
+    width: auto;
+    border-radius: 25px;
+    background-color: rgba(255, 206, 173, .3);
+}
+
+.event-left img {
+    position: relative;
+    float: left;
+    margin: 10px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.event-left h2 {
+    font-family: 'calibri';
+    font-weight: 500;
+}
+
+.event-right img {
+    position: relative;
+    float: left;
+    margin: 10px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.event-left h2 {
+    font-family: 'calibri';
+    font-weight: 500;
+}
 .bottom-bar {
 	height: 25%;
 	width: 100%;

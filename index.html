@@ -7,25 +7,62 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+    	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="main.js">
+	<script>
+		var status = 0;
+		function expand()
+		{	
+		    if(status == 0) {
+		        let sidenav = document.getElementById('side-nav')
+			sidenav.style.cssText = 'width: 220px;';
+			sidenav.classList.toggle("expand");
+			setTimeout(()=> {sidenav.classList.remove('expand')},500);
+
+		        let bars = document.getElementById('expand-bars');
+			bars.classList.toggle('spinForward');
+			bars.style.cssText = 'transform: rotate(90deg);';
+			setTimeout(()=> {bars.classList.remove('spinForward')},500);
+
+			status++;
+		    }else {
+		        let sidenav = document.getElementById('side-nav')
+			sidenav.style.cssText = 'width: 65px;';
+			sidenav.classList.toggle("collapse");
+			setTimeout(()=> {sidenav.classList.remove('collapse')},500);
+
+		        let bars = document.getElementById('expand-bars');
+			bars.classList.toggle('spinBackward');
+			bars.style.cssText = 'transform: none;';
+			setTimeout(()=> {bars.classList.remove('spinBackward')},500);
+
+			status--;
+		    }
+		    console.log("diller");
+		}
+	</script>
     </head>
+
     <body>
         <div class="top-bar">
-		<div class="circle">
-		</div>
+		<div class="circle"></div>
+		<p>KULTURCAFÈ OSKAR<p>	
 
         </div>
         <div class="content-wrapper">
-            <div class="side-nav">
-		<a href="">Om</a>
-		<a href="">Billet og Bord</a>
-		<a href="">Lej Kulturcafén</a>
+            <div class="side-nav" id="side-nav">
+		    <img onclick="expand()" id="expand-bars" src="3-bars.png"></img>
             </div>
             <div class="content">
-		    <p> diller</p>
-
+		    <div class="event-left">
+			<img src="madchen.jpeg"></img>
+			<h2>Bobby Bukseløs, 17 nov</h2>
+		    </div>
+		    <div class="event-right">
+			<img src="madchen.jpeg"></img>
+			<h2>Bobby Bukseløs, 17 nov</h2>
+		    </div>
             </div>
-
-	    
         </div>
 	<div class="bottom-bar">
 
